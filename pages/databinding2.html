@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>binding(data())</title>
+</head>
+<body>
+    <p>lilin</p>
+    <p>tiger</p>
+    <p>lenovor</p>
+    <script src="../d3.min.js"></script>
+    <script>
+        var dataset = [3 ,6 ,9 ,12 ,15];
+        var p = d3.select("body").selectAll("p");
+        var up = p.data(dataset);
+        console.log(up);
+        console.log(up.enter());
+        console.log(up.exit());
+    </script>
+</body>
+</html>

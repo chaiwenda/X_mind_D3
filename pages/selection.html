@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selection</title>
+    <script src="../d3.min.js"></script>
+</head>
+<body>
+<script>
+    /*
+    目前只有用js代码写出来的CSS属性才能用attr（name）的方法获取到
+    * */
+    var data1 = [
+        {'father':{'name':'a'},'relationship':{'src':'http://study.163.com/my#/smarts'},'son':{'name':'b'}},
+        {'father':{'name':'b'},'relationship':{'src':'http://study.163.com/my#/smarts2'},'son':{'name':'c'}},
+        {'father':{'name':'c'},'relationship':{'src':'http://study.163.com/my#/smarts3'},'son':{'name':'d'}},
+        {'father':{'name':'d'},'relationship':{'src':'http://study.163.com/my#/smarts4'},'son':{'name':'e'}},
+        {'father':{'name':'e'},'relationship':{'src':'http://study.163.com/my#/smarts5'},'son':{'name':'f'}},
+        {'father':{'name':'f'},'relationship':{'src':'http://study.163.com/my#/smarts6'},'son':{'name':'g'}},
+        {'father':{'name':'g'},'relationship':{'src':'http://study.163.com/my#/smarts7'},'son':{'name':'h'}},
+        {'father':{'name':'h'},'relationship':{'src':'http://study.163.com/my#/smarts8'},'son':{'name':'i'}},
+        {'father':{'name':'i'},'relationship':{'src':'http://study.163.com/my#/smarts9'},'son':{'name':'j'}},
+        {'father':{'name':'j'},'relationship':{'src':'http://study.163.com/my#/smarts10'},'son':{'name':'k'}}];
+    var data2 = [
+        {'father':{'name':'a'},'relationship':{'src':'http://study.163.com/my#/smarts'},'son':{'name':'b'}},
+        {'father':{'name':'b'},'relationship':{'src':'http://study.163.com/my#/smarts2'},'son':{'name':'c'}},
+        {'father':{'name':'c'},'relationship':{'src':'http://study.163.com/my#/smarts3'},'son':{'name':'d'}},
+        {'father':{'name':'d'},'relationship':{'src':'http://study.163.com/my#/smarts4'},'son':{'name':'e'}},
+        {'father':{'name':'e'},'relationship':{'src':'http://study.163.com/my#/smarts5'},'son':{'name':'f'}},
+        {'father':{'name':'f'},'relationship':{'src':'http://study.163.com/my#/smarts6'},'son':{'name':'g'}},
+        {'father':{'name':'g'},'relationship':{'src':'http://study.163.com/my#/smarts7'},'son':{'name':'h'}},
+        {'father':{'name':'h'},'relationship':{'src':'http://study.163.com/my#/smarts8'},'son':{'name':'i'}},
+        {'father':{'name':'i'},'relationship':{'src':'http://study.163.com/my#/smarts9'},'son':{'name':'j'}},
+        {'father':{'name':'j'},'relationship':{'src':'http://study.163.com/my#/smarts10'},'son':{'name':'k'}}];
+    var data3 = [
+        {'father':{'name':'a'},'relationship':{'src':'http://study.163.com/my#/smarts'},'son':{'name':'b'}},
+        {'father':{'name':'b'},'relationship':{'src':'http://study.163.com/my#/smarts2'},'son':{'name':'c'}},
+        {'father':{'name':'c'},'relationship':{'src':'http://study.163.com/my#/smarts3'},'son':{'name':'d'}},
+        {'father':{'name':'d'},'relationship':{'src':'http://study.163.com/my#/smarts4'},'son':{'name':'e'}},
+        {'father':{'name':'e'},'relationship':{'src':'http://study.163.com/my#/smarts5'},'son':{'name':'f'}},
+        {'father':{'name':'f'},'relationship':{'src':'http://study.163.com/my#/smarts6'},'son':{'name':'g'}},
+        {'father':{'name':'g'},'relationship':{'src':'http://study.163.com/my#/smarts7'},'son':{'name':'h'}},
+        {'father':{'name':'h'},'relationship':{'src':'http://study.163.com/my#/smarts8'},'son':{'name':'i'}},
+        {'father':{'name':'i'},'relationship':{'src':'http://study.163.com/my#/smarts9'},'son':{'name':'j'}},
+        {'father':{'name':'j'},'relationship':{'src':'http://study.163.com/my#/smarts10'},'son':{'name':'k'}}];
+    for(var i = 0;i<data1.length;i++){
+        console.log('画出第'+ i + '条链');
+         var mind = d3.select("body");
+            mind.append("p")
+            .text(data1[i].father.name);
+            mind.append("a")
+                .text('跳转')
+                .attr('href',data1[i].relationship.src);
+            // .attr('href',data1[i].relationship.src);
+            mind.append("p")
+            .text(data1[i].son.name);
+            mind.append('div')
+                .text('===================================');
+    }
+    for(var i = 0;i<data2.length;i++){
+        console.log('画出第'+ i + '条链');
+        var mind2 = d3.select("body");
+        mind.append("p")
+            .text(data2[i].father.name);
+        mind.append("a")
+            .text('跳转')
+            .attr('href',data2[i].relationship.src);
+        // .attr('href',data2[i].relationship.src);
+        mind.append("p")
+            .text(data2[i].son.name);
+        mind.append('div')
+            .text('===================================');
+    }
+    for(var i = 0;i<data3.length;i++){
+        console.log('画出第'+ i + '条链');
+        var mind3 = d3.select("body");
+        mind.append("p")
+            .text(data3[i].father.name);
+        mind.append("a")
+            .text('跳转')
+            .attr('href',data3[i].relationship.src);
+        // .attr('href',data3[i].relationship.src);
+        mind.append("p")
+            .text(data3[i].son.name);
+        mind.append('div')
+            .text('===================================');
+    }
+
+</script>
+</body>
+</html>
